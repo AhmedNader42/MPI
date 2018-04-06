@@ -61,7 +61,8 @@ int main(int argc, char* argv[])
 
 		scanf("%i %lf %lf", &n, &a, &b);
 	}
-        // Broadcast the start and end of the interval and the number of trapezoids to the SLAVES.
+    
+    // Broadcast the start and end of the interval and the number of trapezoids to the SLAVES.
     MPI_Bcast(&a, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
     MPI_Bcast(&b, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
     MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
